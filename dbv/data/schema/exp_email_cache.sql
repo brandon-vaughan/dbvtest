@@ -1,0 +1,20 @@
+CREATE TABLE `exp_email_cache` (
+  `cache_id` int(6) unsigned NOT NULL AUTO_INCREMENT,
+  `cache_date` int(10) unsigned NOT NULL DEFAULT '0',
+  `total_sent` int(6) unsigned NOT NULL,
+  `from_name` varchar(70) NOT NULL,
+  `from_email` varchar(70) NOT NULL,
+  `recipient` text NOT NULL,
+  `cc` text NOT NULL,
+  `bcc` text NOT NULL,
+  `recipient_array` mediumtext NOT NULL,
+  `subject` varchar(120) NOT NULL,
+  `message` mediumtext NOT NULL,
+  `plaintext_alt` mediumtext NOT NULL,
+  `mailinglist` char(1) NOT NULL DEFAULT 'n',
+  `mailtype` varchar(6) NOT NULL,
+  `text_fmt` varchar(40) NOT NULL,
+  `wordwrap` char(1) NOT NULL DEFAULT 'y',
+  `priority` char(1) NOT NULL DEFAULT '3',
+  PRIMARY KEY (`cache_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8

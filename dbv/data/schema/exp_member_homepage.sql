@@ -1,0 +1,20 @@
+CREATE TABLE `exp_member_homepage` (
+  `member_id` int(10) unsigned NOT NULL,
+  `recent_entries` char(1) NOT NULL DEFAULT 'l',
+  `recent_entries_order` int(3) unsigned NOT NULL DEFAULT '0',
+  `recent_comments` char(1) NOT NULL DEFAULT 'l',
+  `recent_comments_order` int(3) unsigned NOT NULL DEFAULT '0',
+  `recent_members` char(1) NOT NULL DEFAULT 'n',
+  `recent_members_order` int(3) unsigned NOT NULL DEFAULT '0',
+  `site_statistics` char(1) NOT NULL DEFAULT 'r',
+  `site_statistics_order` int(3) unsigned NOT NULL DEFAULT '0',
+  `member_search_form` char(1) NOT NULL DEFAULT 'n',
+  `member_search_form_order` int(3) unsigned NOT NULL DEFAULT '0',
+  `notepad` char(1) NOT NULL DEFAULT 'r',
+  `notepad_order` int(3) unsigned NOT NULL DEFAULT '0',
+  `bulletin_board` char(1) NOT NULL DEFAULT 'r',
+  `bulletin_board_order` int(3) unsigned NOT NULL DEFAULT '0',
+  `pmachine_news_feed` char(1) NOT NULL DEFAULT 'n',
+  `pmachine_news_feed_order` int(3) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`member_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
